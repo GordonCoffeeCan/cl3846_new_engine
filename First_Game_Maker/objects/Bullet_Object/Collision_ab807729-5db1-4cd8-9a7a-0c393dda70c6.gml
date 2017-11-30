@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-var float shootTimer = 0;
+with(other){
+	enemyHealth -= 5;
+}
 
-var float playerSpeed = 0;
+instance_destroy();
