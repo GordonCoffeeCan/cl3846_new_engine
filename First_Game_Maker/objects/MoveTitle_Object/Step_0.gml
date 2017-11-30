@@ -1,7 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-with(other){
+if(GameManager.gameStart == true){
 	instance_destroy();
-	GameManager.gameOver = true;
 }

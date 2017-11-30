@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if(instance_exists(Player_Object)){
+if(instance_exists(Player_Object) && gameStart == true){
 	if(enemyCount < 3){
 		createEnemyTimer --;
 		if(createEnemyTimer <= 0){
@@ -32,4 +32,9 @@ if(instance_exists(Player_Object)){
 	if(keyboard_check_pressed(ord("R"))){
 		game_restart();
 	}
+}
+
+if(gameOver == true && gameOverTitleShowed == false){
+	gameOverTitleShowed = true;
+	instance_create_layer(room_width/2, room_height/2, layer, GameOver_Object);
 }

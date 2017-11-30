@@ -3,11 +3,12 @@
 
 if(keyboard_check(vk_left) || keyboard_check(ord("A"))){
 	image_angle += 5;
-	
+	GameManager.gameStart = true;
 }
 
 if(keyboard_check(vk_right) || keyboard_check(ord("D"))){
 	image_angle -= 5;
+	GameManager.gameStart = true;
 }
 
 if(keyboard_check(vk_up) || keyboard_check(ord("W"))){
@@ -16,6 +17,7 @@ if(keyboard_check(vk_up) || keyboard_check(ord("W"))){
 		speed = 5;
 	}
 	direction = image_angle + 90;
+	GameManager.gameStart = true;
 }
 
 if(keyboard_check(vk_down) || keyboard_check(ord("S"))){
@@ -24,6 +26,7 @@ if(keyboard_check(vk_down) || keyboard_check(ord("S"))){
 		speed = -5;
 	}
 	direction = image_angle + 90;
+	GameManager.gameStart = true;
 }
 
 if(keyboard_check(vk_control) && shootTimer < 1){
